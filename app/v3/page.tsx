@@ -1,0 +1,36 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import VersionSwitch from "../version-switch";
+import styles from "./v3.module.css";
+
+export const metadata: Metadata = {
+  title: "Fish Guy Supply — Good Fish. No Guesswork.",
+  description: "Complete fish bundles, aquarium starter kits, and handpicked supplies. A bright and easy way into fishkeeping.",
+};
+
+export default function V3Page() {
+  return (
+    <main className={styles.page} id="v3-top">
+      <VersionSwitch current="v3" />
+      <header className={styles.nav}><a className={styles.brand} href="#v3-top" aria-label="Fish Guy Supply, back to top">FISH GUY<br />SUPPLY<span>.</span></a><nav aria-label="Main navigation"><a href="#v3-shop">THE GOODS</a><a href="#v3-process">HOW IT WORKS</a><a className={styles.navPill} href="#v3-shop">FIND YOUR SETUP <span aria-hidden="true">↗</span></a></nav></header>
+
+      <section className={styles.hero} aria-labelledby="v3-hero-title"><Image src="/images/v3/hero-lifestyle.png" alt="Hands tending plants in a bright home aquarium" fill loading="eager" sizes="100vw" className={styles.heroPhoto} /><div className={styles.heroContent}><span className={styles.eyebrow}>AQUARIUMS FOR ACTUAL HUMANS / EST. FOR THE CURIOUS</span><h1 id="v3-hero-title"><span>GOOD</span><span>FISH.</span><span className={styles.redWord}>NO</span><span>GUESSWORK.</span></h1></div><div className={styles.heroBottom}><p>Fishkeeping without the guesswork. Complete setups, clear guidance, and the good stuff picked by fish people.</p><a className={styles.outlineButton} href="#v3-shop">FIND YOUR START <span aria-hidden="true">↗</span></a><span className={styles.scrollCue} aria-hidden="true">↓</span></div></section>
+
+      <section className={styles.intro} id="v3-about" aria-labelledby="v3-intro-title"><div className={styles.sectionKicker}><span>HI, WE’RE FISH GUY SUPPLY</span><span>01 / 04</span></div><div className={styles.introGrid}><h2 id="v3-intro-title">A WHOLE<br />NEW <span>WORLD.</span><br />NONE OF THE<br />HOMEWORK.</h2><div className={styles.introCopy}><p>Starting an aquarium should feel like something wonderful is about to happen. It should not take a dozen tabs and a crash course in equipment to get there.</p><p>We put the right things together, explain the next steps, and make space for the fun part: watching your little world come to life.</p><a className={styles.textLink} href="#v3-process">SEE HOW WE MAKE IT EASY <span aria-hidden="true">↗</span></a></div></div><div className={styles.introStamp}>NO 27 TABS<br />REQUIRED <span>✳</span></div></section>
+
+      <section className={styles.shop} id="v3-shop" aria-labelledby="v3-shop-title"><div className={styles.sectionKicker}><span>THE FISH GUY MENU</span><span>02 / 04</span></div><div className={styles.shopHeading}><h2 id="v3-shop-title">PICK YOUR<br /><span>KIND OF START.</span></h2><p>All in, almost all in, or just here for the useful extras. There is a good way in for everyone.</p></div><div className={styles.menuList}>
+        <article className={styles.menuCard}><div className={styles.menuCopy}><span className={styles.menuNumber}>01 / FISH + AQUARIUM</span><h3>THE WHOLE<br />LITTLE WORLD.</h3><p>A complete setup and fish chosen to thrive together. Everything belongs, right from the start.</p><a className={styles.outlineButton} href="#v3-process">FISH BUNDLES <span aria-hidden="true">↗</span></a></div><div className={styles.menuImage}><Image src="/images/v3/fish-closeup.png" alt="Orange fish swimming among lush green aquarium plants" fill sizes="(max-width: 700px) 100vw, 50vw" /></div></article>
+        <article className={`${styles.menuCard} ${styles.menuCardReverse}`}><div className={styles.menuCopy}><span className={styles.menuNumber}>02 / EVERYTHING BUT FISH</span><h3>THE SETUP.<br />SORTED.</h3><p>A tank, equipment, supplies, and a plan. Bring your own fish plans when the time is right.</p><a className={styles.outlineButton} href="#v3-process">STARTER KITS <span aria-hidden="true">↗</span></a></div><div className={styles.menuImage}><Image src="/images/v3/kit-unboxing.png" alt="Hands unpacking a beginner aquarium starter kit" fill sizes="(max-width: 700px) 100vw, 50vw" /></div></article>
+        <article className={styles.menuCard}><div className={styles.menuCopy}><span className={styles.menuNumber}>03 / THE USEFUL EXTRAS</span><h3>GOOD GEAR.<br />NO GUESSING.</h3><p>Individual supplies that make sense for your aquarium, chosen by people who actually keep fish.</p><a className={styles.outlineButton} href="#v3-process">SUPPLIES <span aria-hidden="true">↗</span></a></div><div className={styles.menuImage}><Image src="/images/v3/hero-lifestyle.png" alt="A planted aquarium in a bright, sunlit home" fill sizes="(max-width: 700px) 100vw, 50vw" /></div></article>
+      </div></section>
+
+      <section className={styles.photoBreak} aria-label="A closer look at the aquarium"><Image src="/images/v3/fish-closeup.png" alt="Sunlit orange fish in a planted aquarium" fill sizes="100vw" /><div className={styles.photoCaption}>THE GOOD PART STARTS HERE <span>↗</span></div></section>
+
+      <section className={styles.process} id="v3-process" aria-labelledby="v3-process-title"><div className={styles.sectionKicker}><span>THE SMART WAY TO START</span><span>03 / 04</span></div><div className={styles.processHeading}><h2 id="v3-process-title">FIRST THE TANK.<br /><span>THEN THE FISH.</span></h2><p>Because good fishkeeping starts before the fish arrive.</p></div><div className={styles.processPanel}><div className={styles.processStep}><span>01 / PICK</span><h3>CHOOSE<br />YOUR SETUP.</h3><p>Fish bundle, fish-free kit, or supplies. You choose your starting point.</p></div><div className={styles.processStep}><span>02 / PREPARE</span><h3>MAKE A<br />LITTLE WORLD.</h3><p>Your tank, gear, essentials, and clear instructions get you going.</p></div><div className={styles.processStep}><span>03 / WELCOME</span><h3>MEET<br />YOUR FISH.</h3><p>For setups that need it, livestock ships after your aquarium is ready.</p></div></div><p className={styles.processNote}>SOME BUNDLES SHIP TOGETHER. WHEN A TANK NEEDS TIME BEFORE LIVESTOCK CAN MOVE IN, YOUR EQUIPMENT ARRIVES FIRST AND YOUR FISH FOLLOW WHEN THE AQUARIUM IS READY.</p></section>
+
+      <section className={styles.final} aria-labelledby="v3-final-title"><div className={styles.sectionKicker}><span>GOOD WATER. GOOD COMPANY.</span><span>04 / 04</span></div><div className={styles.finalPanel}><div><span className={styles.eyebrow}>CONSIDER THIS YOUR SIGN</span><h2 id="v3-final-title">LET’S MAKE<br /><span>A SPLASH.</span></h2><p>There is a whole little world waiting for you. We made the first step the easy one.</p><a className={styles.outlineButton} href="#v3-shop">FIND YOUR START <span aria-hidden="true">↗</span></a></div><div className={styles.finalImage}><Image src="/images/v3/hero-lifestyle.png" alt="A planted aquarium being set up in a sunny room" fill sizes="(max-width: 700px) 100vw, 50vw" /></div></div></section>
+
+      <footer className={styles.footer}><a className={styles.footerBrand} href="#v3-top">FISH GUY SUPPLY.</a><span>GOOD FISHKEEPING STARTS HERE.</span><a href="#v3-top">BACK TO TOP ↑</a></footer>
+    </main>
+  );
+}
